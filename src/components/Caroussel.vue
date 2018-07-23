@@ -8,7 +8,11 @@
 <script>
 export default {
     data(){
-        
+        console.log(slides)
+        return {
+            index :0 ,
+            slides: this.$children
+        }
     }
 }
 </script>
