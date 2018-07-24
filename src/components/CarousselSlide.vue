@@ -1,8 +1,8 @@
 <template>
-    <div>
-      Index : {{index}}
-      visible ? : {{visible}}
+    <div v-show="visible">
+      
       <slot></slot>
+
     </div>
 </template>
 
@@ -15,7 +15,7 @@ export default {
   },
   computed:{
     visible(){
-      return this.index === this.$parent.index
+      return this.index == this.$parent.index
     }
   }
 };

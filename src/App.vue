@@ -1,7 +1,18 @@
 <template>
     <caroussel>
-      <caroussel-slide></caroussel-slide>
-      <caroussel-slide></caroussel-slide>
+      <caroussel-slide>
+        <img src="http://lorempixel.com/630/300" alt="">
+      </caroussel-slide>
+      <caroussel-slide>
+        <img src="http://lorempicsum.com/futurama/630/300" alt="">
+      </caroussel-slide>
+      <caroussel-slide>
+        <img src="http://lorempixel.com/630/300" alt="">
+      </caroussel-slide>
+     
+      <caroussel-slide>
+        <img src="http://lorempicsum.com/futurama/630/300" alt="">
+      </caroussel-slide>
     </caroussel>
 </template>
 
