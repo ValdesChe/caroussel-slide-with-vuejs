@@ -1,18 +1,27 @@
 <template>
     <caroussel>
+      
       <caroussel-slide>
-        <img src="http://lorempixel.com/630/300" alt="">
+        <div class="caroussel-text" style="position:absolute;left:0;right:0;text-align:center;top:70%;color:#FFF;font-size:2em;">Ok 0</div>
+        <img src="http://via.placeholder.com/630x300" alt="" width="100%">
       </caroussel-slide>
+      
       <caroussel-slide>
-        <img src="http://lorempicsum.com/futurama/630/300" alt="">
+        <div class="caroussel-text" style="position:absolute;left:0;right:0;text-align:center;top:70%;color:#FFF;font-size:2em;">Ok 111</div>
+        <img src="http://via.placeholder.com/630x300" alt="" width="100%">
       </caroussel-slide>
+      
       <caroussel-slide>
-        <img src="http://lorempixel.com/630/300" alt="">
+        <div class="caroussel-text" style="position:absolute;left:0;right:0;text-align:center;top:70%;color:#FFF;font-size:2em;">Ok 22222</div>
+        <img src="http://via.placeholder.com/630x300" alt="" width="100%">
       </caroussel-slide>
-     
+      
       <caroussel-slide>
-        <img src="http://lorempicsum.com/futurama/630/300" alt="">
+        <div class="caroussel-text" style="position:absolute;left:0;right:0;text-align:center;top:70%;color:#FFF;font-size:2em;">Ok 33333333</div>
+        <img src="http://via.placeholder.com/630x300" alt="" width="100%">
       </caroussel-slide>
+      
+
     </caroussel>
 </template>
 
