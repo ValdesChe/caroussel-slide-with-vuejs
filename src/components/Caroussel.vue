@@ -8,19 +8,20 @@
                <button v-bind:key="n" v-for="n in slideCount" @click.prevent="goto(n-1)" :class="{active: n-1 == index}"></button>
             </div>
         </div>
+        
     </div>
 </template>
 
 
 <script>
 export default {
+    
     data(){
-        
         return {
             //  fOR CURRENT SLIDE   
-            index :0 ,
+            index:0,
             slides: [],
-            direction : null
+            direction :  "Rigth"
         }
     },
     methods:{
@@ -43,12 +44,12 @@ export default {
                 this.index = this.slideCount -1
         }
     },
-    mounted(){
-        this.slides = this.$children
-        this.slides.forEach( (slide , i ) => {
-            slide.index = i
-        })
-        console.log(this.$children)
+    watch:{
+        slides(slides){
+            if (this.index >= this.slideCount) {
+                this.index = this.slideCount-1
+            }s
+        }
     },
     computed:{
         slideCount(){
@@ -57,6 +58,14 @@ export default {
         hasSlide(){
             return this.slides.length
         }
+    },
+    mounted(){
+        this.slides = this.$children
+        /* 
+        this.slides.forEach( (slide , i ) => {
+            slide.index = i
+        })
+        console.log(this.$children) */
     }
 }
 </script>
