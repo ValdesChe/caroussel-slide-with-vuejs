@@ -8,11 +8,17 @@
 <script>
 export default {
     data(){
-        console.log(slides)
+        
         return {
             index :0 ,
-            slides: this.$children
+            slides: []
         }
+    },
+    mounted(){
+        this.slides = this.$children
+        this.slides.forEach( (slide , i ) => {
+            slide.index = i
+        })
     }
 }
 </script>

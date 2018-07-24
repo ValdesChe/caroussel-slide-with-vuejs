@@ -1,9 +1,7 @@
 <template>
     <caroussel>
-        <caroussel-slide>Carroussel 1</caroussel-slide>
-        
-        <caroussel-slide>Carroussel 2</caroussel-slide>
-    
+      <caroussel-slide></caroussel-slide>
+      <caroussel-slide></caroussel-slide>
     </caroussel>
 </template>
 
