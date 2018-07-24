@@ -93,7 +93,7 @@ export default {
 
     .caroussel__pagination{
         position: absolute;
-        top: 90%;
+        top: 85%;
         left: 0;
         right: 0;
         text-align:center
@@ -101,15 +101,21 @@ export default {
     }
 
     .caroussel__pagination button{
-        height: 20px;
-        width:20px;
+        height: 10px;
+        width:10px;
         margin: 5px;
-        background: url(button.png);
+        /*background: url(button.png); */
+        opacity: 0.5;
+        background: #000;
+        border-radius: 10px;
         
     }
 
     .caroussel__pagination button.active{
-        background: url(rec.png)
+       /*  background: url(rec.png) */
+       
+        background: #3e2dde;
+        opacity: 0.7;
     }
 </style>
 
