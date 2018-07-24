@@ -4,8 +4,8 @@
         <div v-show="hasSlide">
             <button class="caroussel__nav caroussel__prev " @click.prevent ="previousSlide"></button>
             <button class="caroussel__nav caroussel__next " @click.prevent="nextSlide"></button>
-            <div class="caroussel__paginaation">
-                 <button v-bind:key="n" v-for="n in slideCount" @click.prevent="goto(n-1)" :class="{active: n-1 == index}"> {{ n-1 }} </button>
+            <div class="caroussel__pagination">
+               <button v-bind:key="n" v-for="n in slideCount" @click.prevent="goto(n-1)" :class="{active: n-1 == index}"></button>
             </div>
         </div>
     </div>
@@ -24,9 +24,10 @@ export default {
         }
     },
     methods:{
-        goto(indexing){
-
-        },
+        goto(index){
+            this.direction = (this.index > index) ? "Left" : "Rigth"
+            this.index = index
+       },
         nextSlide(){
             
             this.index++
@@ -60,8 +61,13 @@ export default {
 }
 </script>
 <style>
+    button{
+        
+        border: none;
+        padding: 0px;
+        cursor: pointer;
+    }
     .caroussel{
-
         position: relative;
     }
 
@@ -71,8 +77,8 @@ export default {
         margin-top: -31px;
         left: 10px;
         background: url(prev.png);
-        width:60px;
-        height: 60px;
+        width:56px;
+        height: 56px;
     }
 
     .caroussel__prev{
@@ -83,6 +89,27 @@ export default {
         right: 10px;
         left: auto;
         background-image: url(next.png)
+    }
+
+    .caroussel__pagination{
+        position: absolute;
+        top: 90%;
+        left: 0;
+        right: 0;
+        text-align:center
+        
+    }
+
+    .caroussel__pagination button{
+        height: 20px;
+        width:20px;
+        margin: 5px;
+        background: url(button.png);
+        
+    }
+
+    .caroussel__pagination button.active{
+        background: url(rec.png)
     }
 </style>
 
